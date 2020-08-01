@@ -9,11 +9,21 @@ Este repositorio contiene el material del curso SOC3070 Análisis de Datos Categ
 
 - Introducción a R y Rstudio: [`[Presentación]`](https://mebucca.github.io/cda_soc3070/slides/class_1/#1) [`[Código]`](slides/class_1/class_1.Rmd) 
 - Introducción a bases de datos
-- Taller 1, Primer acercamiento a base de datos en R: CASEN 2017
-- Taller 2, Workflow
-- Manipulación de bases de datos con `tidyverse`; ordenar, filtrar y seleccionar
-- Manipulación de bases de datos con `tidyverse`; creación y transformación de variables
-- Manipulación de bases de datos con `tidyverse`; creación y transformación de variables
+- Taller #1, Primer acercamiento a base de datos en R: CASEN 2017
+- Taller #2, Workflow
+- Manipulación de bases de datos con `tidyverse` (1/3)
+- Manipulación de bases de datos con `tidyverse` (2/3)
+- Manipulación de bases de datos con `tidyverse` (3/3)
+- Taller #3,  Manipulación de datos CASEN 2017 con herramientas `tidyverse`.
+- Reordenación de bases de datos
+- Tratamiento de datos faltantes
+- Inferencia y test estadísticos básicos en R 
+- Visualización de datos con ggplot2 (1/2)
+- Visualización de datos con ggplot2 (2/2)
+- Automatización (loops y funciones)
+- Reportes automatizados con `RMarkdown`
+- Taller #4, Workflow avanzado 
+
 
 ### Ayudantías
 
