@@ -7,7 +7,7 @@ Este repositorio contiene el material del curso SOC3070 Análisis de Datos Categ
 ### Clases
 
 - Introducción a R y Rstudio: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_1/#1) [`[Código]`](slides/class_1/class_1.Rmd) 
-- Introducción a bases de datos
+- Introducción a bases de datos: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_2/#1) [`[Código]`](slides/class_2/class_2.Rmd) 
 - Taller #1, Primer acercamiento a base de datos en R: CASEN 2017
 - Taller #2, Workflow
 - Manipulación de bases de datos con `tidyverse` (1/3)
