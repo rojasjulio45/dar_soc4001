@@ -21,10 +21,9 @@ editor_options:
 ## Hoy hablaremos de ...
 
 - El universo R
+
 - Primeros pasos en R
-- Funciones basales
-- Trabajando con datos en R
-- Próximos pasos: libreria `tidyverse`
+
 
 ---
 layout: false
@@ -573,6 +572,21 @@ as.numeric(factor_x)
 as.character(factor_x)
 ```
 
+---
+
+## En la próxima clase .... 
+
+- Bases de datos en R
+
+- Listas
+
+- Manipulación de datos
+
+- Funciones basales
+
+- Visualización
+    
+    
 ---
 class: fullscreen,left, top, top, text-azzurro
 background-image: url("images/bicicleta.jpg")

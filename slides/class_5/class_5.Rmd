@@ -16,6 +16,30 @@ output:
       slideNumberFormat: "%current%"
 editor_options: 
   chunk_output_type: console
+
+---
+
+## Recapitulación
+<br>
+
+- Funciones basales de R
+
+- Manipulación de datos
+
+- Workflow en R
+
+---
+
+## Hoy hablaremos de ...
+
+- Universo `tidyverse`
+
+  - Importar datos con `readr`
+  
+  - Bases de datos "modernas" con `tibble`
+  
+  - ordenar, seleccionar, filtrar con`dplyr`
+
 ---
 class: fullscreen, left, middle, text-black
 background-image: url("images/typewriter.jpg")
@@ -24,6 +48,7 @@ background-image: url("images/typewriter.jpg")
 .huge[#datos]
 
 ---
+
 
 ## readr, haven, readxl y más
 
@@ -606,24 +631,13 @@ Incluir todos los casos que satisfacen *a lo más* una de las dos condiciones:
 
 ---
 
-# Más allá de las funciones basales: [tidyverse]
+## En la próxima clase ... 
 
-- Manipulación de datos
-    - [tibble],  [tidyr], [dplyr]
-- Visualización de datos
-    - [ggplot2]
-- Escritura y reporte de datos
-    - [knitr]
-- Reporte interactivo de datos
-    - [shiny]
+- Creación y transformación de datos con `dplyr`
 
-[tidyverse]: https://tidyverse.org/
-[tibble]: https://tibble.tidyverse.org/
-[tidyr]:  https://tidyr.tidyverse.org/
-[dplyr]:  https://dplyr.tidyverse.org/
-[ggplot2]: https://ggplot2.tidyverse.org/
-[knitr]: http://yihui.name/knitr/
-[shiny]: http://www.rstudio.com/shiny/
+- Manipulación de datos agrupados con `dplyr`
+
+- Resumen de datos con `dplyr`
 
 ---
 

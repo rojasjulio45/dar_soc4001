@@ -27,30 +27,24 @@ layout: false
 
 - Primeros pasos en R
 
-- Funciones basales
-
-- Trabajando con datos en R
-
-- Próximos pasos: libreria `tidyverse`
-
-<br>
-
-.img-right[![](images/class_2/poppins-bag-kids.gif)]
-
 ---
 
 ## Hoy hablaremos de ...
 
-- El universo R
-- Primeros pasos en R
+- Bases de datos en R
+
+- Listas
+
+- Manipulación de datos
+
 - Funciones basales
-- Trabajando con datos en R
-- Próximos pasos: libreria `tidyverse`
+
+- Visualización
 
 ---
 
 class: fullscreen, left, middle, text-black
-background-image: url("images/class_2/typewriter.jpg")
+background-image: url("images/typewriter.jpg")
 
 .huge[#Dataframes]
 
@@ -196,7 +190,7 @@ mylist$data[1:2,2:3]
 ---
 
 class: fullscreen,left, middle, text-black
-background-image: url("images/class_2/typewriter.jpg")
+background-image: url("images/typewriter.jpg")
 
 .huge[#Manipulación]
 .huge[#de datos]
@@ -213,7 +207,7 @@ En lo que sigue vamos a usar esta base de datos para ejemplificar diferentes her
 ]
 
 .pull-right[
-![NO](images/class_2/franja_NO.jpg)
+![NO](images/franja_NO.jpg)
 ]
 
 ---
@@ -360,7 +354,7 @@ dim(data_chile[complete.cases(data_chile),])
 ---
 
 class: fullscreen,left, middle, text-black
-background-image: url("images/class_2/typewriter.jpg")
+background-image: url("images/typewriter.jpg")
 
 .huge[#Funciones]
 .huge[#basales]
@@ -452,7 +446,7 @@ mean(data_chile$income, na.rm = TRUE)
 ---
 
 class: fullscreen,left, middle, text-black
-background-image: url("images/class_2/typewriter.jpg")
+background-image: url("images/typewriter.jpg")
 
 .huge[#Variables]
 .huge[#aleatorias]
@@ -532,7 +526,7 @@ sigma    <- sqrt(sigma2); sigma
 ---
 
 class: fullscreen,left, middle, text-black
-background-image: url("images/class_2/typewriter.jpg")
+background-image: url("images/typewriter.jpg")
 
 .huge[#Loops e]
 .huge[#iteraciones]
@@ -631,7 +625,7 @@ results
 ---
 
 class: fullscreen,left, middle, text-black
-background-image: url("images/class_2/typewriter.jpg")
+background-image: url("images/typewriter.jpg")
 
 .huge[#Visualización]
 .huge[#de]
@@ -711,29 +705,14 @@ box() #<<
 
 ---
 
-# Más allá de las funciones basales: [tidyverse]
+## En la próxima clase ... 
 
-- Manipulación de datos
-    - [tibble],  [tidyr], [dplyr]
-- Visualización de datos
-    - [ggplot2]
-- Escritura y reporte de datos
-    - [knitr]
-- Reporte interactivo de datos
-    - [shiny]
-
-[tidyverse]: https://tidyverse.org/
-[tibble]: https://tibble.tidyverse.org/
-[tidyr]:  https://tidyr.tidyverse.org/
-[dplyr]:  https://dplyr.tidyverse.org/
-[ggplot2]: https://ggplot2.tidyverse.org/
-[knitr]: http://yihui.name/knitr/
-[shiny]: http://www.rstudio.com/shiny/
+- Taller #1: primer acercamiento a bases de datos en R (CASEN 2017)
 
 ---
 
 class: fullscreen,left, top, top, text-azzurro
-background-image: url("images/class_2/bicicleta.jpg")
+background-image: url("images/bicicleta.jpg")
 
 .huge[#R se aprende]
 .huge[#usando y]
@@ -741,7 +720,7 @@ background-image: url("images/class_2/bicicleta.jpg")
 
 ---
 
-![](images/class_2/stack-exchange-search.png)
+![](images/stack-exchange-search.png)
 
 ---
 class: inverse, middle

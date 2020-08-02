@@ -29,30 +29,24 @@ layout: false
 
 - Primeros pasos en R
 
-- Funciones basales
-
-- Trabajando con datos en R
-
-- Próximos pasos: libreria `tidyverse`
-
-&lt;br&gt;
-
-.img-right[![](images/class_2/poppins-bag-kids.gif)]
-
 ---
 
 ## Hoy hablaremos de ...
 
-- El universo R
-- Primeros pasos en R
+- Bases de datos en R
+
+- Listas
+
+- Manipulación de datos
+
 - Funciones basales
-- Trabajando con datos en R
-- Próximos pasos: libreria `tidyverse`
+
+- Visualización
 
 ---
 
 class: fullscreen, left, middle, text-black
-background-image: url("images/class_2/typewriter.jpg")
+background-image: url("images/typewriter.jpg")
 
 .huge[#Dataframes]
 
@@ -123,13 +117,13 @@ head(mydf)
 .pull-bottom[
 
 ```
-##   x y z
-## 1 A 5 k
-## 2 B 4 x
-## 3 C 2 h
-## 4 A 8 a
-## 5 B 9 b
-## 6 C 6 q
+##   x  y z
+## 1 A  9 p
+## 2 B  4 o
+## 3 C 10 f
+## 4 A  5 t
+## 5 B  1 j
+## 6 C  2 w
 ```
 ]
 
@@ -154,16 +148,16 @@ as.data.frame(mymatrix)
 
 ```
 ##    v1 v2
-## 1  58  s
-## 2  67  g
-## 3  71  v
-## 4  87  l
-## 5  34  z
-## 6  30  e
-## 7  94  n
-## 8  18  y
-## 9  48  f
-## 10 69  u
+## 1  12  j
+## 2  74  p
+## 3  49  s
+## 4  41  b
+## 5  87  t
+## 6  98  m
+## 7  56  x
+## 8  72  h
+## 9  28  f
+## 10 39  o
 ```
 
 ---
@@ -190,12 +184,12 @@ names(mydf)
 
 ```
 ##   group_string outcome_numeric letters_factor
-## 1            A               5              k
-## 2            B               4              x
-## 3            C               2              h
-## 4            A               8              a
-## 5            B               9              b
-## 6            C               6              q
+## 1            A               9              p
+## 2            B               4              o
+## 3            C              10              f
+## 4            A               5              t
+## 5            B               1              j
+## 6            C               2              w
 ```
 
 ---
@@ -301,7 +295,7 @@ mylist$data[1:2,2:3]
 ---
 
 class: fullscreen,left, middle, text-black
-background-image: url("images/class_2/typewriter.jpg")
+background-image: url("images/typewriter.jpg")
 
 .huge[#Manipulación]
 .huge[#de datos]
@@ -318,7 +312,7 @@ En lo que sigue vamos a usar esta base de datos para ejemplificar diferentes her
 ]
 
 .pull-right[
-![NO](images/class_2/franja_NO.jpg)
+![NO](images/franja_NO.jpg)
 ]
 
 ---
@@ -566,7 +560,7 @@ dim(data_chile[complete.cases(data_chile),])
 ---
 
 class: fullscreen,left, middle, text-black
-background-image: url("images/class_2/typewriter.jpg")
+background-image: url("images/typewriter.jpg")
 
 .huge[#Funciones]
 .huge[#basales]
@@ -723,7 +717,7 @@ mean(data_chile$income, na.rm = TRUE)
 ---
 
 class: fullscreen,left, middle, text-black
-background-image: url("images/class_2/typewriter.jpg")
+background-image: url("images/typewriter.jpg")
 
 .huge[#Variables]
 .huge[#aleatorias]
@@ -759,16 +753,16 @@ matrix(my_normal,10,3)
 
 ```
 ##              [,1]       [,2]       [,3]
-##  [1,] -0.62050269 -0.2348615  0.8599786
-##  [2,]  1.32579538 -0.8894716  0.2290723
-##  [3,]  1.58494688 -0.0311345 -0.5945134
-##  [4,] -0.32383242 -1.5526428  0.4799096
-##  [5,]  0.08667854  1.8668191 -0.3966611
-##  [6,]  1.83751832  2.2702452  1.2489117
-##  [7,]  0.01823591  0.1983290 -0.1580039
-##  [8,] -0.36687329  1.9706492 -0.3156499
-##  [9,]  0.00726904  0.7730277 -0.3352976
-## [10,] -0.64139226 -0.9044403 -0.8412218
+##  [1,]  1.60852043  0.5112028 -0.2644926
+##  [2,] -1.16133201  1.7045053  0.9606174
+##  [3,]  0.29713304 -0.7056610  0.4658321
+##  [4,] -0.03251877  0.4134597  1.4180339
+##  [5,] -1.37505027  0.9761409 -0.9132482
+##  [6,]  0.38601766  0.4231743 -1.0858368
+##  [7,]  0.89611003  0.8589617  1.0251684
+##  [8,]  0.51604802  0.9384375 -0.9634328
+##  [9,]  0.80946115 -0.2901903 -1.6232241
+## [10,]  0.21973737  0.9206978  1.3880186
 ```
 ]
 
@@ -800,7 +794,7 @@ quantile(my_normal,
 
 ```
 ##      2.5%     97.5% 
-## -1.916655  2.079918
+## -1.933495  1.951004
 ```
 ]
 
@@ -826,13 +820,13 @@ sigma    &lt;- sqrt(sigma2); sigma
 ```
 
 ```
-## [1] 1.029454
+## [1] 1.015071
 ```
 
 ---
 
 class: fullscreen,left, middle, text-black
-background-image: url("images/class_2/typewriter.jpg")
+background-image: url("images/typewriter.jpg")
 
 .huge[#Loops e]
 .huge[#iteraciones]
@@ -956,7 +950,7 @@ results
 ---
 
 class: fullscreen,left, middle, text-black
-background-image: url("images/class_2/typewriter.jpg")
+background-image: url("images/typewriter.jpg")
 
 .huge[#Visualización]
 .huge[#de]
@@ -1036,29 +1030,14 @@ barplot(table(Chile$education),
 
 ---
 
-# Más allá de las funciones basales: [tidyverse]
+## En la próxima clase ... 
 
-- Manipulación de datos
-    - [tibble],  [tidyr], [dplyr]
-- Visualización de datos
-    - [ggplot2]
-- Escritura y reporte de datos
-    - [knitr]
-- Reporte interactivo de datos
-    - [shiny]
-
-[tidyverse]: https://tidyverse.org/
-[tibble]: https://tibble.tidyverse.org/
-[tidyr]:  https://tidyr.tidyverse.org/
-[dplyr]:  https://dplyr.tidyverse.org/
-[ggplot2]: https://ggplot2.tidyverse.org/
-[knitr]: http://yihui.name/knitr/
-[shiny]: http://www.rstudio.com/shiny/
+- Taller #1: primer acercamiento a bases de datos en R (CASEN 2017)
 
 ---
 
 class: fullscreen,left, top, top, text-azzurro
-background-image: url("images/class_2/bicicleta.jpg")
+background-image: url("images/bicicleta.jpg")
 
 .huge[#R se aprende]
 .huge[#usando y]
@@ -1066,7 +1045,7 @@ background-image: url("images/class_2/bicicleta.jpg")
 
 ---
 
-![](images/class_2/stack-exchange-search.png)
+![](images/stack-exchange-search.png)
 
 ---
 class: inverse, middle
