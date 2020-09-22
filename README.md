@@ -1,6 +1,6 @@
 # SOC4001 Procesamiento avanzado de bases de datos en R
 
-Este repositorio contiene el material del curso SOC3070 Análisis de Datos Categóricos, dictado el segundo semestre 2020 a estudiantes de postgrado del Departamento de Sociología de la Universidad Católica de Chile. Para mayores detalles ver el [`[programa]`](files/syllabus_soc4001.pdf) del curso.
+Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado de Bases de Datos en R, dictado el segundo semestre 2020 por el Departamento de Sociología de la Universidad Católica de Chile a estudiantes de educación continua. Para mayores detalles ver el [`[programa]`](files/syllabus_soc4001.pdf) del curso.
 
 ## Material del curso
 
