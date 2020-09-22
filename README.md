@@ -30,6 +30,12 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 #### Tareas 
 
-- Tarea 1:
+- 01/10, Asignación Tarea 1:
+- 08/10, Asignación Tarea 2:
+- 22/10, Asignación Tarea 3:
+- 07/11, Asignación Tarea 4:
+- 19/11, Asignación Tarea 5:
 
 #### Trabajo Final
+
+- 26/11, Asignación Trabajo final:
