@@ -6,23 +6,23 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 ### Clases
 
-- S 26/09, 09:00 a 12:00: Introducción a R y Rstudio: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_1/#1) [`[.Rmd]`](slides/class_1/class_1.Rmd) 
-- J 01/10, 18:00 a 20:00: Introducción a bases de datos: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_2/#1) [`[.Rmd]`](slides/class_2/class_2.Rmd) 
-- S 03/10, 09:00 a 12:00: Taller #1, Primer acercamiento a base de datos en R: CASEN 2017
-- J 08/10, 18:00 a 20:00: Taller #2, Workflow
-- J 15/10, 18:00 a 20:00: Manipulación de bases de datos con `tidyverse` (1/3)
-- J 22/10, 18:00 a 20:00: Manipulación de bases de datos con `tidyverse` (2/3)
-- S 24/10, 09:00 a 12:00: Manipulación de bases de datos con `tidyverse` (3/3)
-- J 29/10, 18:00 a 20:00: Taller #3,  Manipulación de datos CASEN 2017 con herramientas `tidyverse`.
-- J 05/11, 18:00 a 20:00: Reordenación de bases de datos
-- S 07/11, 09:00 a 12:00: Tratamiento de datos faltantes
-- J 12/11, 18:00 a 20:00: Inferencia y test estadísticos básicos en R 
-- J 19/11, 18:00 a 20:00: Visualización de datos con ggplot2 (1/2)
-- S 21/11, 09:00 a 12:00: Visualización de datos con ggplot2 (2/2)
-- J 26/11, 18:00 a 20:00: Automatización (loops y funciones)
-- J 03/12, 18:00 a 20:00: Reportes automatizados con `RMarkdown`
-- J 10/12, 18:00 a 20:00: Taller #4, Workflow avanzado 
-- S 12/12, 09:00 a 12:00: Recapitulación
+- S 26/09, 09:00 a 12:00, **Introducción a R y Rstudio**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_1/#1) [`[.Rmd]`](slides/class_1/class_1.Rmd) 
+- J 01/10, 18:00 a 20:00, **Introducción a bases de datos**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_2/#1) [`[.Rmd]`](slides/class_2/class_2.Rmd) 
+- S 03/10, 09:00 a 12:00, Taller #1, Primer acercamiento a base de datos en R: CASEN 2017
+- J 08/10, 18:00 a 20:00, Taller #2, Workflow
+- J 15/10, 18:00 a 20:00, Manipulación de bases de datos con `tidyverse` (1/3)
+- J 22/10, 18:00 a 20:00, Manipulación de bases de datos con `tidyverse` (2/3)
+- S 24/10, 09:00 a 12:00, Manipulación de bases de datos con `tidyverse` (3/3)
+- J 29/10, 18:00 a 20:00, Taller #3,  Manipulación de datos CASEN 2017 con herramientas `tidyverse`.
+- J 05/11, 18:00 a 20:00, Reordenación de bases de datos
+- S 07/11, 09:00 a 12:00, Tratamiento de datos faltantes
+- J 12/11, 18:00 a 20:00, Inferencia y test estadísticos básicos en R 
+- J 19/11, 18:00 a 20:00, Visualización de datos con ggplot2 (1/2)
+- S 21/11, 09:00 a 12:00, Visualización de datos con ggplot2 (2/2)
+- J 26/11, 18:00 a 20:00, Automatización (loops y funciones)
+- J 03/12, 18:00 a 20:00, Reportes automatizados con `RMarkdown`
+- J 10/12, 18:00 a 20:00, Taller #4, Workflow avanzado 
+- S 12/12, 09:00 a 12:00, Recapitulación
 
 ### Ayudantías
 
