@@ -5,7 +5,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 ### Clases
 
-- Clase 01: 26/09, 09:00 a 12:00, **Introducción a R y Rstudio**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_1/#1) [`[.Rmd]`](slides/class_1/class_1.Rmd) 
+- Clase 01: 26/09, 09:00 a 12:00, **Introducción a R y Rstudio**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_1/#1) [`[.Rmd]`](slides/class_1/class_1.Rmd) [`[RScript]`](slides/class_1/class_1.R)
 - Clase 02: 01/10, 18:00 a 20:00, **Introducción a bases de datos**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_2/#1) [`[.Rmd]`](slides/class_2/class_2.Rmd) 
 - Clase 03: 03/10, 09:00 a 12:00, **Taller #1, Primer acercamiento a base de datos en R: CASEN 2017**
 - Clase 04: 08/10, 18:00 a 20:00, **Taller #2, Workflow**
