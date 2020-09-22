@@ -1,0 +1,192 @@
+# Script clase 1
+
+## Primeros pasos en R: 
+
+"Hello world" 
+log(4+ exp(0)) 
+4==7
+
+## Packages
+
+install.packages('tidyverse')
+
+library(tidyverse)
+
+?tidyverse
+?lm
+?anova
+
+
+## Working directory
+
+setwd("/ubicacion/de/mis/archivos/")
+getwd()
+
+
+## Operadores básicos
+
+2 + 2      # suma
+2/2        # división
+2*2        # multiplicación
+2^2        # exponente
+sqrt(2)    # raiz cuadrada
+log(2)     # log
+exp(2)     # exponencial
+2 == 2     # evaluación lógica
+42 >= 2    # evaluación lógica
+2 <= 42    # evaluación lógica
+2 != 42    # evaluación lógica
+23 %/% 2   # division por entero -> 11
+23 %% 2    # el remanente -> 1
+
+
+## Tipos de datos
+
+1L          # entero
+1.0         # numérico
+"1"         # texto o "string"
+TRUE == 1   # lógica
+FALSE == 0  # lógica
+NA          # valor perdido
+factor()    # factor
+
+x=2*2
+class(x)
+is.numeric(x)
+
+
+##Símbolos básicos
+
+x <- 1        # operador de asignación
+x = 1         # igual, operador de asignación
+x == 1        # evaluación lógica
+y <- x:10; y  # sequencia
+y[3:2]        # selection de elementos
+rm(x)         # remover un objeto   
+
+## Funciones
+
+my_fn1 <- function(x){
+  fx <- 2*log(exp(x)*exp(2*x)) #<<
+return(fx)
+}
+my_fn1(1)
+
+
+my_fn2 <- function(x){
+  fx <- paste(x,"!!!") #<<
+return(fx)
+}
+my_fn2("usa R")
+
+
+## Vectores
+
+x <- c(1, 2, 3, 4, 5)
+y <- c(6:10)
+z <- c(x,y); z
+u <- c("a","b","c")
+v <- letters[4:6]
+w <- c(u,v); w
+
+## Construcción de vectores
+
+# repetición de un elemento
+rep(3,5)
+# sequencia desde, hasta, 'by"
+seq(4,12,by=2)
+# sequencia desde, largo n
+seq(4,9,length.out = 5)
+# muestra aleatoria dentro de un rango
+sample(1:50,5)
+# muestra aleatoria dentro de un rango
+sample(1:50,5)
+
+
+
+## Operaciones con vectores:
+
+
+
+x <- c(1,5,2)
+y <- c(1,2,3)
+
+# adición
+x + y
+
+# multiplicación/division por una contante
+y/2
+
+# multiplicación/division por otro vector
+x*y
+
+
+## Operaciones con vectores (algebra lineal)
+
+# transposición
+t(x)
+
+# producto punto
+dot <- t(x)%*%y; dot
+
+# producto diadico
+outer <--x%o%y; outer
+
+
+## Matrices: juntando vectores con igual dimensión
+
+# column-bind
+cbind(x,y)   # matriz 3 x 2
+
+# row-bind
+rbind(x,y)   # matriz 2 x 3
+
+
+
+## Matrices: función 'matrix'
+
+x <- 1:10
+
+matrix(x, nrow=2, ncol=5, byrow=TRUE)
+
+matrix(x, nrow=2, ncol=5, byrow=FALSE)
+
+## Reciclaje matrices
+
+matrix(1:5, nrow=2, ncol=5, byrow=FALSE)
+
+
+
+## Strings (texto)
+
+mystr <- "texto"; mystr
+
+paste(mystr, "!!", sep="")
+
+paste( c(mystr,"!","!"), collapse = "-")
+
+
+
+## Factors
+
+x <- rep(1:3, 2); x # "replicate" secuencia 1:3 dos veces
+
+factor_x <- factor(x, levels=c(1, 2, 3), labels=c("A","B","C")); factor_x
+
+y <- 10:15
+lm(y ~ factor_x)
+
+## Reordernar etiquetas de factores 
+  
+factor_x <- factor(x, levels=c(2, 1, 3), labels=c("B","C","A")); factor_x
+
+lm(y ~ factor_x)
+
+
+## Extraer valores y etiquetas de factores
+
+as.numeric(factor_x)
+
+as.character(factor_x)
+
+
