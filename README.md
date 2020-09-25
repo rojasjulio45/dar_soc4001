@@ -6,7 +6,8 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 ### Clases
 
 - Clase 01: 26/09, 09:00 a 12:00, **Introducción a R y Rstudio**: [`[Presentación]`](https://mebucca.github.io/dar_soc4001/slides/class_1/#1) [`[.Rmd]`](slides/class_1/class_1.Rmd) [`[RScript]`](slides/class_1/class_1.R)
-
+  
+  - Cápsula 01: Instalación `R` y `RStudio`: [`[Link]`](https://www.youtube.com/watch?v=IgsXUjQgtOM&feature=youtu.be) 
 
 ### Evaluaciones 
 
