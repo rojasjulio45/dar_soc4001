@@ -2,26 +2,26 @@
 
 ## Primeros pasos en R: 
 
-"Hello world" 
-log(4+ exp(0)) 
-4==7
+"Hello world" # texto
+log(4 + exp(0)) # número
+4==7 # evaluación lógica
+
 
 ## Packages
+p <- c("tidyverse","modelr")
+install.packages(p) # instala paquete
 
-install.packages('tidyverse')
+library("tidyverse") # carga paquete
 
-library(tidyverse)
-
-?tidyverse
-?lm
+?tidyverse # ayuda paquetes
+?lm # ayuda funciones
 ?anova
-
 
 ## Working directory
 
-setwd("/ubicacion/de/mis/archivos/")
-getwd()
-
+# fija directorio de trabajo
+setwd("~/Library/Mobile Documents/com~apple~CloudDocs/Teaching/ISUC/2020_2_categorical_data_analysis/hw_ans")
+getwd() # chequea directorio de trabajo
 
 ## Operadores básicos
 
@@ -39,6 +39,9 @@ exp(2)     # exponencial
 23 %/% 2   # division por entero -> 11
 23 %% 2    # el remanente -> 1
 
+raiz2 <- sqrt(2) # crea objeto que contiene resultado de operación matemática
+
+
 
 ## Tipos de datos
 
@@ -50,28 +53,42 @@ FALSE == 0  # lógica
 NA          # valor perdido
 factor()    # factor
 
-x=2*2
+x <- 2*2
 class(x)
 is.numeric(x)
-
 
 ##Símbolos básicos
 
 x <- 1        # operador de asignación
+              # más comentario
+
 x = 1         # igual, operador de asignación
 x == 1        # evaluación lógica
-y <- x:10; y  # sequencia
-y[3:2]        # selection de elementos
+y <- sample(1:100,10); y  # muestra de 10 valores seleccionados aleatoriamente entre 1 y 100
+y <- y[c(1,6,3)]   # selection de elementos en posición 1,6,3 y re-escribe y
+sort(y)       # ordena de mayor a menor
 rm(x)         # remover un objeto   
+
 
 ## Funciones
 
-my_fn1 <- function(x){
-  fx <- 2*log(exp(x)*exp(2*x)) #<<
-return(fx)
-}
-my_fn1(1)
 
+# funcion que suma todo los elementos de un vector y divide por la cantidad elemento: promedio
+
+mi_promedio <- function(x) {
+  suma <- sum(x)
+  n    <- length(x)
+  return(suma/n)
+}
+
+mi_promedio(y) # evalua función con y como input
+  
+y2 <- sample(1:1000, 50) # creo otro vector y2
+
+mi_promedio(y2) # evalua función con y2 como input
+
+
+# función con texto
 
 my_fn2 <- function(x){
   fx <- paste(x,"!!!") #<<
@@ -105,8 +122,6 @@ sample(1:50,5)
 
 
 ## Operaciones con vectores:
-
-
 
 x <- c(1,5,2)
 y <- c(1,2,3)
