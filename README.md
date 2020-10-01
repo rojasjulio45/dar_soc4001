@@ -17,7 +17,7 @@ Este repositorio contiene el material del curso SOC4001 Procesamiento Avanzado d
 
 #### Tareas 
 
-- 01/10, Asignación Tarea 1: [`[PDF]`](https://mebucca.github.io/dar_soc4001/homework/t_1.pdf)
+- 01/10, Asignación Tarea 1: [`[PDF]`](homework/t_1.pdf)
 
 
 #### Trabajo Final
