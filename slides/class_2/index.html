@@ -59,12 +59,20 @@ background-image: url("images/typewriter.jpg")
 
 - A diferencia de otros softwares estadísticos (e.g, `SPSS`, `SAS`,`Stata`), en `R` las bases de dato son un tipo de estructura de datos, entre muchos otros.
 
-  - Un dataframe es una matriz donde cada file es una "observación y cada columna es un "variable". 
-  
+--
+
+  - Un dataframe es una matriz donde cada fila es una "observación y cada columna es un "variable". 
+
+--
+
   - En un dataframe cada elemento (o "variable") debe tener la misma longitud (mismo número de "observaciones").
-  
+
+--
+
   - A diferencia de una matriz, un dataframe puede abarcar cualquier mezcla de tipos de datos. 
-  
+
+--
+
   - Una gran ventaja de `R` es que permite trabajar simultáneamente con más de una base de datos (además de cualquier otro tipo de objeto).
 
 ---
@@ -118,12 +126,12 @@ head(mydf)
 
 ```
 ##   x  y z
-## 1 A  9 p
-## 2 B  4 o
-## 3 C 10 f
-## 4 A  5 t
-## 5 B  1 j
-## 6 C  2 w
+## 1 A  9 v
+## 2 B  7 l
+## 3 C 10 a
+## 4 A  2 p
+## 5 B  5 u
+## 6 C  1 q
 ```
 ]
 
@@ -143,28 +151,50 @@ v2 &lt;- sample(letters,10)
 mymatrix &lt;- cbind(v1,v2)
 
 # transformar una matriz en una base de datos
-as.data.frame(mymatrix) 
+mydataframe &lt;- as.data.frame(mymatrix) 
 ```
+
+--
+
+.pull-left[
+
+```
+##       v1   v2 
+##  [1,] "73" "w"
+##  [2,] "65" "h"
+##  [3,] "95" "d"
+##  [4,] "23" "z"
+##  [5,] "83" "y"
+##  [6,] "29" "j"
+##  [7,] "41" "u"
+##  [8,] "46" "x"
+##  [9,] "56" "p"
+## [10,] "57" "k"
+```
+]
+
+--
+
+.pull-right[
 
 ```
 ##    v1 v2
-## 1  12  j
-## 2  74  p
-## 3  49  s
-## 4  41  b
-## 5  87  t
-## 6  98  m
-## 7  56  x
-## 8  72  h
-## 9  28  f
-## 10 39  o
+## 1  73  w
+## 2  65  h
+## 3  95  d
+## 4  23  z
+## 5  83  y
+## 6  29  j
+## 7  41  u
+## 8  46  x
+## 9  56  p
+## 10 57  k
 ```
+]
 
 ---
 
 ## Dar nombre a columnas y filas
-
-Data frames and matrices can have named rows and columns.
 
 
 ```r
@@ -184,12 +214,12 @@ names(mydf)
 
 ```
 ##   group_string outcome_numeric letters_factor
-## 1            A               9              p
-## 2            B               4              o
-## 3            C              10              f
-## 4            A               5              t
-## 5            B               1              j
-## 6            C               2              w
+## 1            A               9              v
+## 2            B               7              l
+## 3            C              10              a
+## 4            A               2              p
+## 5            B               5              u
+## 6            C               1              q
 ```
 
 ---
@@ -272,7 +302,7 @@ mylist &lt;- list(year=1879, name="Michelson Speed of Light Data", data=head(spe
 
 ## Acceder a elementos de una lista
 
-Utilizamos doble corchetepara acceder a cada elemento, o el operador `$`.
+Utilizamos doble corchete para acceder a cada elemento, o el operador `$`.
 
 ```r
 mylist[[1]]
@@ -319,11 +349,11 @@ En lo que sigue vamos a usar esta base de datos para ejemplificar diferentes her
 
 ## Dimensiones 
 
-Para inspeccionar rapidamente una base de datos podemos usar las funciones `head()` and `tail()`. Para saber las dimensiones de una matriz o data frame (*rows*, *cols*) usamos la función `dim()`.
+Para inspeccionar rapidamente una base de datos podemos usar las funciones `head()` and `tail()`. 
 
 
 ```r
-# Carganos los datos de Chile
+# Cargamos los datos de Chile
 library("carData")
 data("Chile") # datos "flotante"
 data_chile &lt;- Chile; # crea dataframe
@@ -341,9 +371,11 @@ head(data_chile) # muestra 6 primeras observaciones
 ## 6      N     175000   F  28         P   7500  -1.04685    N
 ```
 
+--
+
+Para saber las dimensiones de una matriz o data frame (*rows*, *cols*) usamos la función `dim()`.
 
 ```r
-# Inspeccionar dimensiones
 dim(data_chile)
 ```
 
@@ -355,7 +387,7 @@ dim(data_chile)
 
 ## Seleccionar filas y columnas
 
-Filas y columnas se seleccionan usando corchetes cuadrados para "indexar" la posición que se quiere seleccionar. Por ejemplo, `data_chile[3,8]` corresponde a observación 3, varible 8:
+Filas y columnas se seleccionan usando corchetes cuadrados para "indexar" la posición que se quiere seleccionar. Por ejemplo, `data_chile[3,8]` corresponde a observación 3, variable 8:
 
 
 ```r
@@ -366,6 +398,7 @@ data_chile[3,8]
 ## [1] Y
 ## Levels: A N U Y
 ```
+&lt;br&gt;
 --
 
 Seleccionar una fila/columna entera dejando posición en blanco: 
@@ -396,7 +429,11 @@ data_chile[, c("income","vote")]  # solo vars income and vote
 data_chile[c(1,5),'vote']         # variable voto para observaciones 1 y 5
 data_chile$vote                  # selecciona col vote
 ```
+
+--
+
 Ejemplo:
+
 
 ```r
 dim(data_chile[-1,c("income","vote")]) # dimesion
@@ -421,11 +458,15 @@ ncol(data_chile[-1,c("income","vote")]) # número de columnas
 ```
 ## [1] 2
 ```
+
 ---
 
 ## Filtro de datos
 
-Y si sólo nos interesa una sub-muestra de votantes jóvenes que apoyan la opción SI?
+¿Y si sólo nos interesa una sub-muestra de votantes jóvenes que apoyan la opción SI?
+
+--
+
 
 
 ```r
@@ -453,7 +494,6 @@ head(jovenes_pinochetistas,15)
 ```
 
 ---
-
 ## Creación de nuevas variables y recodificación
 
 Para crear una nueva variable debemos asignarla al dataframe usando el operado `$`.
@@ -463,8 +503,30 @@ Para crear una nueva variable debemos asignarla al dataframe usando el operado `
 data_chile$year &lt;- 1988
 ```
 
+&lt;br&gt;
 --
 
+Podemos crear nuevas variables transformando y combinando variables ya existente. Aquí crearemos una variable que calcula el año de nacimiento de los entrevistados:
+
+
+```r
+data_chile$birthyear &lt;- data_chile$year -  data_chile$age
+```
+
+--
+
+
+```r
+head(data_chile$birthyear)
+```
+
+```
+## [1] 1923 1959 1950 1939 1965 1960
+```
+
+---
+
+## Creación de nuevas variables y recodificación
 
 También podemos crear nuevas variables en base a valores de variables existente. Aquí crearemos una variable de grupos de edad.
 
@@ -474,8 +536,18 @@ data_chile$age_group &lt;- NA
 data_chile$age_group[data_chile$age &lt;=35] &lt;- "Young"
 data_chile$age_group[data_chile$age &gt; 35] &lt;- "Old"
 ```
+--
 
 
+```r
+head(data_chile$age_group) 
+```
+
+```
+## [1] "Old"   "Young" "Old"   "Old"   "Young" "Young"
+```
+
+&lt;br&gt;
 --
 
 Detrás de la asignación condicional de valores hay una evaluación lógica.
@@ -492,7 +564,7 @@ head(data_chile$age &lt;= 35)
 
 ## Manipulación de valores perdidos
 
-En un data frame los valores peridios aparecen como `NA`s. `NA`s son un tipo de dato.
+En un data frame los valores perdidos aparecen como `NA`s. `NA`s son un tipo de dato.
 .left-code[
 
 ```r
@@ -536,11 +608,11 @@ dim(data_chile)
 ```
 
 ```
-## [1] 2700   10
+## [1] 2700   11
 ```
 
 ```r
-# cuenta NA para una variable
+# cuenta no NA para una variable
 sum(!is.na(data_chile$vote))
 ```
 
@@ -554,7 +626,7 @@ dim(data_chile[complete.cases(data_chile),])
 ```
 
 ```
-## [1] 2431   10
+## [1] 2431   11
 ```
 
 ---
@@ -599,7 +671,7 @@ str(data_chile)
 ```
 
 ```
-## 'data.frame':	2700 obs. of  10 variables:
+## 'data.frame':	2700 obs. of  11 variables:
 ##  $ region    : Factor w/ 5 levels "C","M","N","S",..: 3 3 3 3 3 3 3 3 3 3 ...
 ##  $ population: int  175000 175000 175000 175000 175000 175000 175000 175000 175000 175000 ...
 ##  $ sex       : Factor w/ 2 levels "F","M": 2 2 1 1 1 1 2 1 1 2 ...
@@ -609,6 +681,7 @@ str(data_chile)
 ##  $ statusquo : num  1.01 -1.3 1.23 -1.03 -1.1 ...
 ##  $ vote      : Factor w/ 4 levels "A","N","U","Y": 4 2 4 2 2 2 2 2 3 2 ...
 ##  $ year      : num  1988 1988 1988 1988 1988 ...
+##  $ birthyear : num  1923 1959 1950 1939 1965 ...
 ##  $ age_group : chr  "Old" "Young" "Old" "Old" ...
 ```
 
@@ -714,143 +787,79 @@ mean(data_chile$income, na.rm = TRUE)
 ## [1] 33875.86
 ```
 ]
----
-
-class: fullscreen,left, middle, text-black
-background-image: url("images/typewriter.jpg")
-
-.huge[#Variables]
-.huge[#aleatorias]
-
----
-
-## Generación de variables aleatorias 
-
-Para todas las distribuciones estadísticas, `R` utiliza las siguiente nomenclatura:
-
-- `d*` = función de densidad/masa
-- `p*` = función de distribución acumulativa
-- `q*` = función de cuantiles
-- `r*` = generación de variaciones aleatorias
-
-Hay muchas disponibles en los paquetes basales de R. Ejecutar `?distributions` para ver una lista completa.
-
----
-
-## Generación de variables aleatorias normal
-
-.pull-left[
-
-```r
-my_normal &lt;- rnorm(n=1000, mean=0, sd=1)
-matrix(my_normal,10,3)
-```
-
-```
-## Warning in matrix(my_normal, 10, 3): data length [1000] is not a sub-multiple or
-## multiple of the number of columns [3]
-```
-
-```
-##              [,1]       [,2]       [,3]
-##  [1,]  1.60852043  0.5112028 -0.2644926
-##  [2,] -1.16133201  1.7045053  0.9606174
-##  [3,]  0.29713304 -0.7056610  0.4658321
-##  [4,] -0.03251877  0.4134597  1.4180339
-##  [5,] -1.37505027  0.9761409 -0.9132482
-##  [6,]  0.38601766  0.4231743 -1.0858368
-##  [7,]  0.89611003  0.8589617  1.0251684
-##  [8,]  0.51604802  0.9384375 -0.9634328
-##  [9,]  0.80946115 -0.2901903 -1.6232241
-## [10,]  0.21973737  0.9206978  1.3880186
-```
-]
-
-.pull-right[
-![](class_2_files/figure-html/unnamed-chunk-24-1.png)&lt;!-- --&gt;
-]
-
----
-
-## Cuantiles
-
-.pull-left[
-
-```r
-# teórico
-qnorm(p=c(0.025,0.5,0.975), 
-      mean=0,sd=1)
-```
-
-```
-## [1] -1.959964  0.000000  1.959964
-```
-
-```r
-# empirico
-quantile(my_normal, 
-        p=c(0.025,0.975))
-```
-
-```
-##      2.5%     97.5% 
-## -1.933495  1.951004
-```
-]
-
-.pull-right[
-![](class_2_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
-]
-
-
----
-
-## Funciones básicas y variables aleatorias en prácticas
-
-Calculemos la desviación estándar de la variable que creamos ( `\(N(0,1)\)` ). Para ello usaremos la siguiente fórmula:
-
-`$$\sigma = \sqrt{ \frac{\sum_{i=1}^{n} (x_{i} - \bar{x})^{2}}{n} }$$`
-
-```r
-n        &lt;- length(my_normal)
-mu_bar   &lt;- mean(my_normal)
-dev2     &lt;- (my_normal - mu_bar)^2
-sigma2   &lt;- sum(dev2)/n
-sigma    &lt;- sqrt(sigma2); sigma 
-```
-
-```
-## [1] 1.015071
-```
 
 ---
 
 class: fullscreen,left, middle, text-black
 background-image: url("images/typewriter.jpg")
 
-.huge[#Loops e]
-.huge[#iteraciones]
+.huge[#Loops]
+.huge[#(adelanto)]
 
 ---
 
 ## `for` loops
 
+Idea: cualquier repetición manual puede ser automatizada
+
+--
+
+.pull-left[
 con números
 
 
 ```r
-for(i in 1:5){
-  print( sqrt(i) + log(i) )
+for(i in 1:10){
+  root2 =  sqrt(i)
+  print(root2)
 }
 ```
 
 ```
 ## [1] 1
-## [1] 2.107361
-## [1] 2.830663
-## [1] 3.386294
-## [1] 3.845506
+## [1] 1.414214
+## [1] 1.732051
+## [1] 2
+## [1] 2.236068
+## [1] 2.44949
+## [1] 2.645751
+## [1] 2.828427
+## [1] 3
+## [1] 3.162278
 ```
+]
+
+--
+
+
+.pull-right[
+con números + almacenamiento
+
+```r
+mynumbers &lt;- matrix(NA, nrow= 10,ncol = 2)
+
+for(i in 1:10){
+  root2 =  sqrt(i)
+  mynumbers[i,1] &lt;- i
+  mynumbers[i,2] &lt;- root2
+}
+print(mynumbers)
+```
+
+```
+##       [,1]     [,2]
+##  [1,]    1 1.000000
+##  [2,]    2 1.414214
+##  [3,]    3 1.732051
+##  [4,]    4 2.000000
+##  [5,]    5 2.236068
+##  [6,]    6 2.449490
+##  [7,]    7 2.645751
+##  [8,]    8 2.828427
+##  [9,]    9 3.000000
+## [10,]   10 3.162278
+```
+]
 
 ---
 
@@ -867,79 +876,43 @@ for (i in list_words) {
   x &lt;- paste(i,"!!", sep="")
   z &lt;- c(z,x)
 }    
-z
+print(z)
 ```
 
 ```
 ## [1] "a!!" "b!!" "c!!" "d!!"
 ```
 
----
-
-## `while` loops
-
-
-```r
-j=1
-while (j &lt; 1000) {
-    print(j)
-    j = exp(j)/j
-}
-```
-
-```
-## [1] 1
-## [1] 2.718282
-## [1] 5.574942
-## [1] 47.30707
-```
 
 ---
 
-## Estructuras de control
+## Una aplicaciónes de loops al trabajo con bases de datos
 
-`if`, `else if`, `else`
-
-
-```r
-a &lt;- 4
-
-if(a &gt; 10){
-  print(":(")
-} else if (a &lt; 2){
-  print(":)")
-} else {
-  print(":S")
-}
-```
-
-```
-## [1] ":S"
-```
-
----
-
-## Aplicaciones de loops, iteraciones y estructuras de control
-
-***Infinitas***: cualquier repeticion manual puede ser automatizada
 
 .lef-top[
 
 ```r
-results &lt;- NULL
 incomes &lt;- sort(unique(Chile$income))
+
+results &lt;- NULL
 
 for (i in incomes) {
   subsample &lt;- Chile[Chile$income==i,]
   props &lt;- prop.table(table(subsample$vote))["N"]
   results &lt;- c(results,props)
 }
-results 
+
+print(incomes)
+print(results) 
 ```
 ]
 
 --
 .pull-bottom[
+
+```
+## [1]   2500   7500  15000  35000  75000 125000 200000
+```
 
 ```
 ##         N         N         N         N         N         N         N 
@@ -971,8 +944,11 @@ plot(log(incomes), results,
      col="red")
 ```
 ]
+
+--
+
 .pull-right[
-![](class_2_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
+![](class_2_files/figure-html/unnamed-chunk-31-1.png)&lt;!-- --&gt;
 ]
 
 ---
@@ -984,13 +960,35 @@ plot(log(incomes), results,
 plot(log(incomes), results, 
      xlab="log(ingresos)", 
      ylab="% voto NO", 
-     type="l", 
+*    type="l",
+     ylim = c(0.25,0.45), col="red")
+```
+]
+
+--
+
+.pull-right[
+![](class_2_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
+]
+
+---
+## Lineas y puntos
+.pull-left[
+
+```r
+plot(log(incomes), results, 
+     xlab="log(ingresos)", 
+     ylab="% voto NO", 
+*    type="l",
      ylim = c(0.25,0.45), col="red")
 
 *points(log(incomes), results,
 *      col="blue", pch=16)
 ```
 ]
+
+--
+
 .pull-right[
 ![](class_2_files/figure-html/unnamed-chunk-33-1.png)&lt;!-- --&gt;
 ]
@@ -1007,9 +1005,13 @@ hist(Chile$income, main="",
      col="orange")
 ```
 ]
+
+--
+
 .pull-right[
 ![](class_2_files/figure-html/unnamed-chunk-34-1.png)&lt;!-- --&gt;
 ]
+
 ---
 
 ## Bar plots
@@ -1024,6 +1026,9 @@ barplot(table(Chile$education),
 *box()
 ```
 ]
+
+--
+
 .pull-right[
 ![](class_2_files/figure-html/unnamed-chunk-35-1.png)&lt;!-- --&gt;
 ]
