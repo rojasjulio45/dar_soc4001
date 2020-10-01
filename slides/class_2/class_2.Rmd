@@ -723,7 +723,7 @@ background-image: url("images/bicicleta.jpg")
 ---
 class: inverse, middle
 
-Presentacióny código en GitHub: <https://github.com/mebucca/data-analysis-in-R>
+Presentación y código en GitHub: <https://github.com/mebucca/dar_soc4001>
 
 ---
 class: inverse, center, middle
